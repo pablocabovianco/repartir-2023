@@ -62,4 +62,14 @@ class GrupoTest {
 
         assertThat(grupo.estaFormado()).isFalse();
     }
+
+    @Test
+    void estaFormadoCuandoTieneDosMiembrosIguales() {
+
+        Grupo grupo = new Grupo();
+
+        grupo.setMiembros(Arrays.asList("pablo", "pablo"));
+
+        assertThat(grupo.estaFormado()).isFalse();
+    }
 }
