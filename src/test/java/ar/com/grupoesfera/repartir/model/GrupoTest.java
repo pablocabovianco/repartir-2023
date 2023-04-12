@@ -64,7 +64,7 @@ class GrupoTest {
     }
 
     @Test
-    void estaFormadoCuandoTieneDosMiembrosIguales() {
+    void noEstaFormadoCuandoTieneDosMiembrosIguales() {
 
         Grupo grupo = new Grupo();
 
