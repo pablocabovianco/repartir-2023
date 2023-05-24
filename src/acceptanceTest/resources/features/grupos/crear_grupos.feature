@@ -16,9 +16,9 @@ Característica: Crear Grupo para repartir gastos
       Entonces no debería crear el grupo sin nombre
       Y debería ser informado que no puede crear un grupo sin nombre
 
-  Regla: Los grupos están compuestos por al menos dos miembros
+  Regla: Los grupos están compuestos por al menos dos miembros distintos
 
-    Escenario: Crea un grupo con dos miembros
+    Escenario: Crea un grupo con dos miembros distintos
       Dado que el usuario inició Repartir
       Cuando el usuario crea un grupo indicando que sus miembros son 'mariano' y 'juancruz'
       Entonces visualiza dentro del listado el grupo con los miembros indicados
@@ -28,6 +28,12 @@ Característica: Crear Grupo para repartir gastos
       Cuando el usuario intenta crear un grupo indicando un único miembro
       Entonces no debería crear el grupo con un único miembro
       Y debería ser informado que necesita tener al menos dos miembros
+
+    Escenario: No puedo crear un grupo con dos miembros iguales
+      Dado que el usuario inició Repartir
+      Cuando el usuario intenta crear un grupo indicando dos miembros iguales
+      Entonces no debería crear el grupo con dos miembros iguales
+      Y debería ser informado que necesita tener al menos dos miembros distintos
 
   Regla: Los grupos tienen un estado inicial
 
