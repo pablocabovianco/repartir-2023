@@ -27,13 +27,13 @@ Característica: Crear Grupo para repartir gastos
       Dado que el usuario inició Repartir
       Cuando el usuario intenta crear un grupo indicando un único miembro
       Entonces no debería crear el grupo con un único miembro
-      Y debería ser informado que necesita tener al menos dos miembros
+      Y debería ser informado que no se pudo guardar el grupo
 
     Escenario: No puedo crear un grupo con dos miembros iguales
       Dado que el usuario inició Repartir
-      Cuando el usuario intenta crear un grupo indicando dos miembros iguales
+      Cuando el usuario crea un grupo indicando que sus miembros son 'pedro' y 'pedro'
       Entonces no debería crear el grupo con dos miembros iguales
-      Y debería ser informado que necesita tener al menos dos miembros distintos
+      Y debería ser informado que no se pudo guardar el grupo
 
   Regla: Los grupos tienen un estado inicial
 
